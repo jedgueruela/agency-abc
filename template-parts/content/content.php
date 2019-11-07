@@ -17,7 +17,7 @@
             <?php comments_number(); ?>
         </span>
 
-        <?php the_date( 'Y-m-d', '<span class="date-type"><i class="fa fa-calendar"></i> <time>', '</time></span>' ); ?>
+        <?php the_date( 'M d, Y', '<span class="date-type"><i class="fa fa-calendar"></i> <time>', '</time></span>' ); ?>
 
     </div>
 
