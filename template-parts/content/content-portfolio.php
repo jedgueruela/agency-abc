@@ -18,20 +18,17 @@
             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
                 <div class="col-lg-3 col-md-6 portfolio-item">
-                    <a href="<?php the_permalink(); ?>">
+                    <?php
+                        if ( has_post_thumbnail() ) :
+                            the_post_thumbnail( 'large' );
+                        endif;
+                    ?>
+
+                    <div class="details">
+                        <?php the_title( '<h4>', '</h4>' ) ?>
                         
-                        <?php
-                            if ( has_post_thumbnail() ) :
-                                the_post_thumbnail( 'large' );
-                            endif;
-                        ?>
-
-                        <div class="details">
-                            <?php the_title( '<h4>', '</h4>' ) ?>
-
-                            <span><?php the_excerpt() ?></span>
-                        </div>
-                    </a>
+                        <span><?php the_excerpt() ?></span>
+                    </div>
                 </div>
 
             <?php endwhile; ?>

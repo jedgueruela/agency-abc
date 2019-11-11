@@ -21,7 +21,15 @@
 
 	<nav class="navbar navbar-expand-lg navbar-light bg-light" role="navigation">
 		<div class="container">
-			<a class="navbar-brand" href="#"><?php echo bloginfo('name'); ?></a>
+			<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>">
+            <?php
+                if ( ! has_custom_logo() ) {
+                    echo bloginfo('name');
+                } else {
+                    the_custom_logo();
+                }
+            ?>
+            </a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>

@@ -25,10 +25,12 @@
         <?php
             the_title( sprintf( '<h2><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
 
-            the_content();
+            the_excerpt();
         ?>
     </div>
 
-    <?php the_title( sprintf( '<span><a class="btn-read-more" href="%s">%s <span class="sr-only">', esc_url( get_permalink() ), __( 'Continue reading', 'agency-abc' ) ), '</span></a></span>' ); ?>
+    <?php 
+        the_title( sprintf( '<span><a class="btn-read-more" href="%s">%s <span class="sr-only">', esc_url( get_permalink() ), __( 'Continue reading', 'agency-abc' ) ), '</span></a></span>' );
+    ?>
     
 </article>

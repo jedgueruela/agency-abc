@@ -126,11 +126,11 @@ h6 {
   margin-bottom: 40px;
   font-size: 48px;
   font-weight: 700;
-  white-space: nowrap;
 }
 
 #intro .intro-info .intro-heading span {
   text-decoration: underline;
+  white-space: nowrap;
 }
 
 #intro .intro-info .btn-get-started,
@@ -195,7 +195,7 @@ h6 {
   margin-right: 15px;
 }
 
-.navbar li a.get-started {
+.navbar li.get-started a {
   border: 2px solid #004a99 !important;
   padding: 10px 32px !important;
   border-radius: 50px;
@@ -205,7 +205,7 @@ h6 {
   text-align: center;
 }
 
-.navbar li a.get-started:hover {
+.navbar li.get-started a:hover {
   background: #004a99;
   color: white !important;
 }
@@ -490,6 +490,7 @@ h6 {
   padding: 30px;
   box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .testimonials .testimonials-item .testimonials-item-quote {
@@ -1010,6 +1011,31 @@ span.email-notes {
   border: 1px solid #3EC1D5;
   color: #fff;
   background: #3EC1D5;
+}
+
+/*--------------------------------------------------------------
+# Generic Wordpress sidebar
+--------------------------------------------------------------*/
+
+#sidebar {
+  padding: 15px 20px;
+  background: #f1f1f1;
+}
+
+#sidebar ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+}
+
+#sidebar ul li ul li {
+  margin-bottom: 15px;
+}
+
+#sidebar h2 {
+  font-size: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
 }
 
 /*--------------------------------------------------------------

@@ -6,21 +6,30 @@
 
         <section class="blog-page">
             <div class="container">
-                <?php
-                    if ( have_posts() ) {
+                <div class="row">
+                    <div class="col-sm-4">
+                        <?php get_sidebar(); ?>
+                    </div>
 
-                        // Load posts loop.
-                        while ( have_posts() ) {
-                            the_post();
-                            get_template_part( 'template-parts/content/content' );
-                        }
-                        
-                    } else {
+                    <div class="col-sm-8">
+                        <?php
+                            if ( have_posts() ) {
 
-                        get_template_part( 'template-parts/content/content', 'none' );
+                                // Load posts loop.
+                                while ( have_posts() ) {
+                                    the_post();
+                                    get_template_part( 'template-parts/content/content' );
+                                }
+                                
+                            } else {
 
-                    }
-                ?>
+                                get_template_part( 'template-parts/content/content', 'none' );
+
+                            }
+                        ?>
+                    </div>
+                </div>
+                
             </div>
         </section><!--/.blog-page -->
 
